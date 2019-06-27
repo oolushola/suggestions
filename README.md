@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/oolushola/suggestions.svg?branch=master)](https://travis-ci.org/oolushola/suggestions)

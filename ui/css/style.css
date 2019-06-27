@@ -1,0 +1,169 @@
+
+body {
+    font-family: 'maiandra GD', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #777;
+    background: #ccc;
+}
+
+.header {
+    background-image:url(../images/walkinthecity.svg);
+    height:80vh;
+    width:100%;
+    background-position: top;
+    background-size:cover;
+    position:relative;
+    background-repeat: no-repeat;
+} 
+
+/*creating an animation for the heading */
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-10rem); }
+    80% {
+      transform: translate(3rem); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(10rem); }
+    80% {
+      transform: translate(-3rem); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }
+  
+  @keyframes moveInBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(10rem); }
+    100% {
+      opacity: 1;
+      transform: translateY(0); } 
+}
+.header__logo-handler {
+    position: absolute;
+    top: 3rem;
+    left: 4rem; 
+}
+.header__logo {
+    height: 5rem; 
+}
+.header__text-area {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.primary-heading {
+    color: #000;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 1rem; 
+}
+.primary-heading--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation: moveInLeft 1s ease-out; 
+    color:red;
+    text-shadow:1px 1px 2px #000;
+}
+.primary-heading--sub {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      text-transform:lowercase;
+      animation: moveInRight 1s ease-out;
+}
+
+.btns:link, .btn:visited {
+    text-decoration: none;
+    text-transform: titlecase;
+    background: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    display: inline-block;
+    position: relative;
+    font-weight: 400; 
+    font-size:20px;
+}
+  
+.btns:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
+}
+.btns:hover:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; 
+}
+
+.btns:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); 
+}
+  
+.btns-white {
+    color: #777;
+    font-weight: 700; 
+}
+.btns-white-white::after {
+    background-color: #fff; 
+}
+  
+.btns::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; 
+}
+  
+.btns-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; 
+}
+  
+.btns-text:link, .btns-text:visited {
+    border-bottom: 0.1rem solid #55e57a;
+    padding: .3rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #55e57a;
+    transition: all .2s; 
+}
+  
+.btns-text:hover {
+    transform: translateY(-0.2rem);
+    background-color: #55e57a;
+    color: #fff; 
+}
+  
+.btns-text:active {
+    box-shadow: 0.1rem 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+    transform: translateY(0); 
+}
+
+.search {
+    background: #ccc;
+    height: 15vh;
+}
+.search label {
+    font-size:13px;
+    color:#000;
+    font-weight:bold;
+}
+
