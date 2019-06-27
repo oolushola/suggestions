@@ -4,9 +4,15 @@
   "description": "An API endpoint that provides auto-complete suggestions for large cities",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=test nyc --require @babel/register mocha test/suggestions.js --exit",
     "start": "node app.js",
-    "serve": "nodemon app.js"
+    "serve": "nodemon --exec @babel-node app.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,11 +30,29 @@
   },
   "homepage": "https://github.com/oolushola/suggestions#readme",
   "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-regenerator": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "cities.json": "^1.1.5",
     "cors": "^2.8.5",
+    "coveralls": "^3.0.4",
+    "cross-env": "^5.2.0",
     "express": "^4.17.1",
     "fuse.js": "^3.4.5",
-    "nodemon": "^1.19.1"
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": "10.15.1"
   },
   "devDependencies": {
     "plain-text-data-to-json": "^1.0.2",

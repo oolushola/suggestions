@@ -1,11 +1,10 @@
-var createError = require('http-errors');
-var express = require('express');
-var bodyParser = require('body-parser');
-var cors = require('cors');
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import router from './routes/suggestion-routes';
 
-var router = require('./routes/suggestion-routes');
 
-var app = express();
+let app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -21,10 +20,8 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, (err) => {
   if (err) throw err;
-  // eslint-disable-next-line no-console
   console.log(`SERVER RUNNING ON PORT: ${PORT}`);
 });
 
-// export default app;
+export default app;
 
-module.exports = app;
