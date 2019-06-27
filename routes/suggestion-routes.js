@@ -1,22 +1,27 @@
-var express = require('express');
-var router = express.Router();
-var Fuse = require('fuse.js');
+import { Router } from 'express';
+import Fuse from 'fuse.js';
+import cities from 'cities.json';
 
-var cities = require('cities.json');
+const router = Router();
 
 router.get('/', function(req, res){
     res.send('Welcome to the getdev suggestion api');
 });
 
+/**
+ * @query {q} as city suggetion, Optional {latitude} Latitude and {longitude} Longitude
+ * 
+ * @response [{...}] array of Objects
+ */
+
 router.get('/suggestions', function(req, res){
     const { q, latitude, longitude } = req.query;
-    var options = {
+    const options = {
         keys: ["name"]
     }
-    var fuse = new Fuse(cities, options);
+    const fuse = new Fuse(cities, options);
     const result= fuse.search(q);
-    res.send({suggestions:result}).status(200);
+    res.send({ message: 'successful', status: 200, suggestions:result}).status(200);
 });
 
-// export default router;
-module.exports = router;
+ export default router;
