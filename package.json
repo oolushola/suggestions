@@ -1,0 +1,37 @@
+{
+  "name": "suggestions",
+  "version": "1.0.0",
+  "description": "An API endpoint that provides auto-complete suggestions for large cities",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "serve": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oolushola/suggestions.git"
+  },
+  "keywords": [
+    "longitude",
+    "latitude",
+    "auto-complete"
+  ],
+  "author": "Olushola O.D",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oolushola/suggestions/issues"
+  },
+  "homepage": "https://github.com/oolushola/suggestions#readme",
+  "dependencies": {
+    "cities.json": "^1.1.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fuse.js": "^3.4.5",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "plain-text-data-to-json": "^1.0.2",
+    "text-2-json": "^1.0.4"
+  }
+}
