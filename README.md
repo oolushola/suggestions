@@ -2,8 +2,7 @@
 
 
 
-# ADC - BANKA
-> LOS-Cycle 43 Challenge
+### GDEV - SUGGESTIONS
 
 ![Logo of the project](ui/images/hom-design.jpg)
 
