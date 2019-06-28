@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/oolushola/suggestions.svg?branch=master)](https://travis-ci.org/oolushola/suggestions) [![Coverage Status](https://coveralls.io/repos/github/oolushola/suggestions/badge.svg?branch=master)](https://coveralls.io/github/oolushola/suggestions?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/447b577716e54980cde4/maintainability)](https://codeclimate.com/github/oolushola/suggestions/maintainability)
+[![Build Status](https://travis-ci.org/oolushola/suggestions.svg?branch=master)](https://travis-ci.org/oolushola/suggestions) [![Coverage Status](https://coveralls.io/repos/github/oolushola/suggestions/badge.svg?branch=master)](https://coveralls.io/github/oolushola/suggestions?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/447b577716e54980cde4/maintainability)](https://codeclimate.com/github/oolushola/suggestions/maintainability) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
